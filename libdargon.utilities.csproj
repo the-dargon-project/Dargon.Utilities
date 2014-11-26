@@ -41,7 +41,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileLock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceCounter.cs" />
     <Compile Include="VersionStringUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
