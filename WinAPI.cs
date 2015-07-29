@@ -18,6 +18,11 @@ namespace Dargon {
       [DllImport("user32.dll")]
       public static extern int EnumWindows(CallBackPtr callPtr, int lPar);
 
+      public delegate bool EnumThreadDelegate(IntPtr hWnd, IntPtr lParam);
+
+      [DllImport("user32.dll")]
+      public static extern bool EnumThreadWindows(int dwThreadId, EnumThreadDelegate lpfn, IntPtr lParam);
+
       [DllImport("user32.dll")]
       public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
